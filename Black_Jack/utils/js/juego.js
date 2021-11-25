@@ -3,6 +3,7 @@ let baraja = [];
 let jugadores = [];
 let turno = false;
 
+//VARIABLES JUGADOR
 let botonIniciar = document.querySelector('#btn-iniciar');
 let botonSacar = document.querySelector('#btn-sacar');
 let botonMostar = document.querySelector('#btn-mostrar');
@@ -14,7 +15,7 @@ let puntuacionJugador = document.querySelector('#puntuacion_jugador');
 let puntuacionJ2 = document.querySelector('#puntuacion_j2');
 
 let nombreJugador = prompt("Introduce tu nombre");
-document.querySelector('#nombre_jugador').textContent = nombreJugador
+document.querySelector('#nombre_jugador').textContent = nombreJugador;
 jugadores.push(new jugador(nombreJugador));
 
 jugadores.push(new jugador('j2'));
@@ -61,11 +62,11 @@ function iniciarBaraja() {
             if (i < 11) {
                 baraja.push( new Carta(i,palos[x]));
             } else if (i == 11) {
-                baraja.push(new Carta(J,palos[x]));
+                baraja.push(new Carta('J',palos[x]));
             } else if (i == 12) {
-                baraja.push(new Carta(Q, palos[x]));
+                baraja.push(new Carta('Q',palos[x]));
             } else if (i == 13) {
-                baraja.push(new Carta(K, palos[x]));
+                baraja.push(new Carta('K',palos[x]));
             }
         }
     }
@@ -81,7 +82,7 @@ function sacarCarta() {
 function ponerCarta(carta) {
 
     let imagen = document.createElement("img");
-    imagen.className = "carta";
+    imagen.className = "carta-jugador";
     imagen.src = carta.getImg;
 
     if (turno) {
