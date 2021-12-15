@@ -21,6 +21,7 @@ window.addEventListener('load', (e) => {
         let clave = document.querySelector('#ls-ind-clave').value;
         let valor = document.querySelector('#ls-ind-valor').value;
         let colorLS = document.querySelector('#ls-color').value;
+
         let clavels = document.querySelector('#LSclave');
         let valorls = document.querySelector('#LSvalor');
         
@@ -29,8 +30,8 @@ window.addEventListener('load', (e) => {
             localStorage.setItem("valor", valor);
             localStorage.setItem("color", colorLS);
 
-            clavels.innerHTML(`<td>${clave}</td>`);
-            valorls.innerHTML(`<td>${valor}</td>`);
+            clavels.innerHTML =`<td>${clave}</td>`;
+            valorls.innerHTML =`<td>${valor}</td>`;
         
         }
     }));
@@ -44,7 +45,7 @@ window.addEventListener('load', (e) => {
         
         if (nombre != "" && apellido != "" && telefono != "") {
             localStorage.setItem("objeto", JSON.stringify(new objeto(nombre, apellido, telefono, disponivilidad)));
-            objetols.innerHTML(`<td>${objeto}</td>`);
+            objetols.innerHTML = `<td>${objeto}</td>`;
 
         }
     });
@@ -66,11 +67,17 @@ window.addEventListener('load', (e) => {
         let valor = document.querySelector('#ss-ind-valor').value;
         let colorSS = document.querySelector('#ss-color').value;
 
+        let clavess = document.querySelector('#SSclave');
+        let valorss = document.querySelector('#SSvalor');
+
 
         if (clave != "" && valor != "") {
             sessionStorage.setItem("clave", clave);
             sessionStorage.setItem("valor", valor);
             sessionStorage.setItem("color", colorSS);
+
+            clavess.innerHTML =`<td>${clave}</td>`;
+            valorss.innerHTML =`<td>${valor}</td>`;
 
         }
 
@@ -82,8 +89,11 @@ window.addEventListener('load', (e) => {
         let telefono = document.querySelector('#ss-obj-tlf').value;
         let disponivilidad = document.querySelector('#ss-obj-disp').value;
 
+        let objetoss = document.querySelector('#SSobjeto');
+
         if (nombre != "" && apellido != "" && telefono != "") {
             sessionStorage.setItem("objeto", JSON.stringify(new objeto(nombre, apellido, telefono, disponivilidad)));
+            objetoss.innerHTML = `<td>${objeto}</td>`;
         }
     });
     btnSSBorrar.addEventListener('click',(e)=>{
@@ -103,12 +113,21 @@ window.addEventListener('load', (e) => {
         let expiracion = document.querySelector('#expiracion-cookie').value;
         let color = document.querySelector('#color-cookie').value;
 
+        let tbcookie= document.querySelector('#ck')
+
         if (clave != "" && valor != "") {
             document.cookie = `clave= ${clave};`;
             document.cookie = `valor= ${valor};`;
             document.cookie = `expiracion=${expiracion};`;
             document.cookie = `color=${color};`;
+
         }
+        let CookieCompleta = document.cookie;
+        let CookiesParitidas = CookieCompleta.replace(" ", ";").split(";")
+        CookiesParitidas.forEach(element => {
+            let CookieIndividual = element.split("=")
+            tbcookie.innerHTML= `El valor de la cookie ${CookieIndividual[0]} es ${CookieIndividual[2]}, tiene una expiracion de ${CookieIndividual[3]}`;
+        })
     });
 });
 
