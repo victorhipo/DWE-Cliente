@@ -96,13 +96,13 @@ function recuperarcookie(nombre) {
 }
 
 function instancias() {
-    botonAgregar = document.querySelector('#boton-agregar')
-    botonRecuperar = document.querySelector('#boton-recuperar')
-    botonBorrar = document.querySelector('#boton-borrar')
-    botonIndex = document.querySelector("#boton-index")
-    botonCrearCookie = document.querySelector('#boton-crear-cookie')
-    botonRecuperarCookie = document.querySelector('#boton-recuperar-cookie')
-    botonEliminarCookie = document.querySelector('#boton-borrar-cookie')
+    botonAgregar = document.querySelector('#boton-agregar');
+    botonRecuperar = document.querySelector('#boton-recuperar');
+    botonBorrar = document.querySelector('#boton-borrar');
+    botonIndex = document.querySelector("#boton-index");
+    botonCrearCookie = document.querySelector('#boton-crear-cookie');
+    botonRecuperarCookie = document.querySelector('#boton-recuperar-cookie');
+    botonEliminarCookie = document.querySelector('#boton-borrar-cookie'); 
 }
 
 function separar_cookie() {
