@@ -1,3 +1,4 @@
+const { response } = require('express');
 var express = require('express');
 var router = express.Router();
 
@@ -582,19 +583,39 @@ router.get('/all', (req, res, next) => {
 // Usuarios genero 
 
 // /usuario/male
-router.get('/male', (req,res,next)=>{
+router.get('/gender/:gender/:name?', (req,res,next)=>{
+    let parametros = req.params;
+    let genero = parametros.gender;
+    let nombre = parametros.name;
+
+    let resultado = [];
+
+    if(nombre != undefined){
+        resultado = usuarios.filter((element)=>{return element.gender == genero && element.name.first == nombre});
+    }
+    else{
+        resultado = usuarios.filter((element)=>{return element.gender == genero});
+    }
+
+    console.log(parametros);
     res.json({
-        results: usuarios.filter((element)=>{return element.gender == 'male'}),
-        number: usuarios.filter((element)=>{return element.gender == 'male'}).length,
+
+        results:resultado,
+        number: resultado.length,
         });
 });
-// / usuarios/female  
-router.get('/female',(req, res, next)=>{
-    res.json({
-        results: usuarios.filter((element)=>{return element.gender == 'female'}),
-        number: usuarios.filter((element)=>{return element.gender == 'female'}).length,
-    });
-});
 
+router.get("/filter",(req,res,next)=>{
+    let parametros = req.query;
+    let country = parametros.country;
+    let genero = parametros.gender;
+
+    let resultado = usuarios.filter((element)=>{
+        return element.gender === genero && element.location.country == country;
+    })
+    console.log(parametros);
+    
+    res.json({response: resultado});
+});
 
 module.exports = router;
