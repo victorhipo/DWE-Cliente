@@ -2,7 +2,7 @@ import "../style/frops.css";
 
 function ComponenteProps() {
     return(
-        <h1>Props</h1>
+        <h1>Componente Props</h1>
     )
 }
 export default ComponenteProps;
