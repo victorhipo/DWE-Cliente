@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col">
+          <h1>Autorizar Operacion</h1>
+
+          <div class="row mb-3">
+            <div class="col"> <input type="text" class="form-control" placeholder=" introduce el nombre" id="clave1"> </div>
+            <div class="col"><input type="password" class="form-control" placeholder=" introduce la clave" id="clave2"></div>
+            <div class="col"><button class="btn btn-primary" id="boton-autorizar"> Autorizar</button></div>
+            
+          </div>
+
+          <div id="form">
+            <div class="col mb-3">
+                <h2>Añadir</h2>
+                <input type="text" class=" form-control mb-3" placeholder=" introduce el nombre" id="nombre_añadir" disabled>
+                <input type="text" class=" form-control mb-3" placeholder=" introduce el apellido" id="apellido_añadir" disabled>
+    
+                <div class="mb-3">
+                    <input type="checkbox" id="exp" disabled> 
+                    <label>Experiencia</label>
+        
+                </div>
+    
+                <button class="btn btn-primary" id="boton-añadir" disabled>Añadir</button>
+    
+              </div>
+              <div class="col mb-3">
+                <h2>Borrar</h2>
+                <input type="text" class=" form-control mb-3" placeholder=" introduce el nombre" id="nombre_borrar" disabled>
+                <button class="btn btn-primary" id="boton-borrar" disabled>Borrar</button>
+    
+              </div>
+              <div class="col mb-3">
+                <h2>Modificar</h2>
+                <input type="text" class=" form-control mb-3" placeholder=" introduce el nombre" disabled>
+                <input type="text" class=" form-control mb-3" placeholder=" introduce el nombre nuevo" disabled>
+                <button class="btn btn-primary" id="boton-modificar" disabled>Modificar</button>
+              </div>
+    
+            </div>
+          </div>
+          
+
+        <div class="col"> 
+          <div id="tabla">
+            <table class="table" id="tabla-resultados">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">nombre</th>
+                    <th scope="col">apellido</th>
+                    <th scope="col">exp</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+          </div>   
+        </div>
+      </div>
+    </div>
+
+    <script src="./utils/js/01-formulario.js"></script>
+  </body>
+</html>

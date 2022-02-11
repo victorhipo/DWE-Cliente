@@ -2,8 +2,7 @@ import "./App.css";
 import ComponenteProps from "./component/ComponenteProps";
 import ComponentePrototype from "./component/ComponentePrototype";
 import ComponenteEvent from  "./component/ComponenteEvent";
-// import ComponenteState from "./component/ComponenteState";
-import ComponenteState2 from "./component/ComponenteState2";
+import ComponenteState from "./component/ComponenteState";
 
 function App() {
   return (
@@ -15,8 +14,7 @@ function App() {
           <ComponenteEvent/>
         </div>
         <div className="staet col">
-        {/* <ComponenteState/> */}
-        <ComponenteState2/>
+        <ComponenteState/>
         </div>
 
       </div>
