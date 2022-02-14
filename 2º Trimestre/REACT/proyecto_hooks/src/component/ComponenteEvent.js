@@ -1,3 +1,4 @@
+import React from 'react'
 import "../style/puls.css";
 
 function ComponenteEvent() {
@@ -17,7 +18,7 @@ function ComponenteEvent() {
 
   return (
     <div>
-      <h1>Componente Eventos</h1>
+      <h1>Componenete Eventos</h1>
       <div className="m-4">
         <input
           type="text"

@@ -2,7 +2,7 @@ import "./App.css";
 import ComponenteProps from "./component/ComponenteProps";
 import ComponentePrototype from "./component/ComponentePrototype";
 import ComponenteEvent from  "./component/ComponenteEvent";
-// import ComponenteState from "./component/ComponenteState";
+ //import ComponenteState from "./component/ComponenteState";
 import ComponenteState2 from "./component/ComponenteState2";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <div className="puls col">
           <ComponenteEvent/>
         </div>
-        <div className="staet col">
+        <div className="state col">
         {/* <ComponenteState/> */}
         <ComponenteState2/>
         </div>
