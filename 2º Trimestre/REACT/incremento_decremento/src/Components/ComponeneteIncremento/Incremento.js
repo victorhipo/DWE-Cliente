@@ -6,7 +6,11 @@ const Incremento = ({counter}) => {
         <button
         className="btn btn-primary"
         name="btn_incremento"
-        onClick={counter((e)=>{return e+1})}
+        onClick={(ev) => {
+          counter((e) => {
+            counter(e + 1);
+          });
+        }}
       > +1</button>
     </div>
   )

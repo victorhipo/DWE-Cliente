@@ -6,18 +6,19 @@ class Carta {
     
     this.img = img;
     this.valor = valor;
-    this.fondo = "./utils/img/Reverso_baraja_española_rojo.svg.png";
+    this.fondo = "utils/img/reverso.png";
+    
   }
-  set img(img) {
+  set setImg(img) {
     this.img = img;
   }
-  get img() {
+  get getImg() {
     return this.img;
   }
   get getValor() {
     return this.valor;
   }
-  get fondo() {
-    return this.fondo;
+  get getFondo() {
+    return this.img;
   }
 }
