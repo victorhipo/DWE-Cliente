@@ -1,6 +1,5 @@
 let url = "https://randomuser.me/api/?";
 let btn;
-
 let genero;
 let numero;
 
